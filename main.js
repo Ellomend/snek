@@ -1,10 +1,10 @@
 import './styles.scss'
 
-(function(){
+(function () {
   /**
    * Game functions
    */
-  function start () {
+  function start() {
     toggleStartButton()
     snake = generateSnake()
     gameCycle()
@@ -51,15 +51,12 @@ import './styles.scss'
     if (e.key === 'ArrowUp' && currentDirection !== DIRECTION.DOWN) {
       e.preventDefault()
       changeDirection(DIRECTION.UP)
-    }
-    else if (e.key === 'ArrowDown' && currentDirection !== DIRECTION.UP) {
+    } else if (e.key === 'ArrowDown' && currentDirection !== DIRECTION.UP) {
       e.preventDefault()
       changeDirection(DIRECTION.DOWN)
-    }
-    else if (e.key === 'ArrowLeft' && currentDirection !== DIRECTION.RIGHT) {
+    } else if (e.key === 'ArrowLeft' && currentDirection !== DIRECTION.RIGHT) {
       changeDirection(DIRECTION.LEFT)
-    }
-    else if (e.key === 'ArrowRight' && currentDirection !== DIRECTION.RIGHT) {
+    } else if (e.key === 'ArrowRight' && currentDirection !== DIRECTION.RIGHT) {
       changeDirection(DIRECTION.RIGHT)
     }
   }
@@ -95,9 +92,9 @@ import './styles.scss'
 // snake
   function generateSnake() {
     return [
-      { x: DIMENSIONS[0]/2 - 30, y: DIMENSIONS[1]/2 },
-      { x: DIMENSIONS[0]/2 - 20, y: DIMENSIONS[1]/2 },
-      { x: DIMENSIONS[0]/2 - 10, y: DIMENSIONS[1]/2 },
+      {x: DIMENSIONS[0] / 2 - 30, y: DIMENSIONS[1] / 2},
+      {x: DIMENSIONS[0] / 2 - 20, y: DIMENSIONS[1] / 2},
+      {x: DIMENSIONS[0] / 2 - 10, y: DIMENSIONS[1] / 2},
     ];
   }
 
@@ -179,7 +176,7 @@ import './styles.scss'
   function writeGameOverText() {
     clearCanvas()
     ctx.font = `${DIMENSIONS[0] / 2 / 5}px sans-serif`
-    ctx.fillText("Game Over", DIMENSIONS[0]/2/2, DIMENSIONS[1] / 2)
+    ctx.fillText("Game Over", DIMENSIONS[0] / 2 / 2, DIMENSIONS[1] / 2)
   }
 
 // Food
