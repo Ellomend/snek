@@ -1,0 +1,107 @@
+@mixin borders {
+    border-radius: 6px;
+    box-shadow: -1px 1px 0 #999, -2px 2px 0 #999, -3px 3px 0 #999, -4px 4px 0 #999;
+    transform: translate3d(0, 0, 0);
+    transition: box-shadow .1s linear, transform .1s linear;
+}
+
+
+.header {
+    @include borders;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #dcdcdc;
+}
+#game {
+    @include borders;
+    margin-bottom: 30px;
+    border: 1px solid #c5c5c5;
+    background: #ccc;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+#content {
+    color: black;
+    @include borders;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    width: 50%;
+    min-width: 500px;
+    max-width: 700px;
+    border: 1px darkgray solid;
+    background: #efefef;
+}
+
+#start {
+    @include borders;
+    display: none;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    height: 75px;
+    border: 1px solid #b7b7b7;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 75px;
+
+    &:active,&.press {
+        box-shadow: 0px 0px 0 #999, 0px 0px 0 #999, 0px 0px 0 #999, -1px 1px 0 #999;
+        transform: translate3d(-3px, 3px, 0);
+    }
+}
+
+#start.active {
+    display: block;
+}
+
+.arrow-key-container {
+    display: inline-block;
+    text-align: center;
+    transform: translate3d(0,0,0);
+    margin-bottom: 30px;
+}
+.arrow-key {
+    align-items: center;
+    background: #ccc;
+    //border-radius: 6px;
+    //box-shadow: -1px 1px 0 #999, -2px 2px 0 #999, -3px 3px 0 #999, -4px 4px 0 #999;
+    @include borders;
+    display: inline-flex;
+    font-size: 30px;
+    font-weight: bold;
+    height: 75px;
+    justify-content: center;
+    margin: 5px;
+    transform: translate3d(0, 0, 0);
+    transition: box-shadow .1s linear, transform .1s linear;
+    width: 75px;
+    &:active,&.press {
+        box-shadow: 0px 0px 0 #999, 0px 0px 0 #999, 0px 0px 0 #999, -1px 1px 0 #999;
+        transform: translate3d(-3px, 3px, 0);
+    }
+    &.left:before {
+        content: "\2190";
+    }
+    &.up:before {
+        content: "\2191";
+    }
+    &.down:before {
+        content: "\2193";
+    }
+    &.right:before {
+        content: "\2192";
+    }
+}
