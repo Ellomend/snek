@@ -9,11 +9,16 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/jest": "^29.2.4",
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.16",
     "postcss-scss": "^4.0.4",
     "sass": "^1.54.5",
     "tailwindcss": "^3.1.8",
     "vite": "^3.0.7"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "three": "^0.147.0"
   }
 }
