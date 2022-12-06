@@ -14,7 +14,7 @@ export class Board {
     public getBoardMesh(wight = 1, height = 1, depth = 1, color = 0x00ff00) {
         let geometry = getBoxGeometry(this.width, this.height, 1);
         let material = getMeshPhongMaterial(color);
-        return getBoxMesh()
+        return getBoxMesh(geometry, material)
     }
     private initBoard() {
         this.mesh = this.getBoardMesh(this.scene);

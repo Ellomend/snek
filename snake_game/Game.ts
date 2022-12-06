@@ -57,7 +57,7 @@ export class Game {
     private initFood() {
         this.food = new Food();
         this.scene.add(this.food.mesh);
-        this.food.setMeshPosition(-10, 1);
+        this.food.setMeshPosition(2, 2);
     }
 
     private initBoard() {
